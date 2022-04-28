@@ -49,48 +49,52 @@ class Calculator extends React.Component{
 
     render(){
       return(
-          <div class="container bg-dark text-light">
-            <h1 class="text-primary">Calculation</h1>    
-            <div>
+          <div class="container bg-dark text-light ">
+            <h1 class="text-primary d-flex justify-content-center p-5 m-2">Calculation</h1>
+            <div class="justify-content-center">    
+            <div class="d-flex justify-content-center">
               <input type="text" placeholder="num1" value={this.state.num1} onChange={this.handlenum1}/>
             </div>
             <br></br>
-            <div>
+
+            <div class="d-flex justify-content-center">
               <input type="text" placeholder="num2" value={this.state.num2} onChange={this.handlenum2}/>
+            </div>
             </div>
             <br></br>
             
-            <div>
+            <div class="d-flex justify-content-center p-3">
             <div>
                <form onSubmit={this.execute}>
-               <button type="Submit" class="btn btn-warning">Addition</button>
+               <button type="Submit" class="btn btn-warning p-2 m-1">Addition</button>
                </form>
                <br></br>
             </div>
 
             <div>
                <form onSubmit={this.execute1}>
-               <button type="Submit" class="btn btn-primary">Substraction</button>
+               <button type="Submit" class="btn btn-primary p-2 m-1">Substraction</button>
                </form>
                <br></br>
             </div>
 
             <div>
                <form onSubmit={this.execute2}>
-               <button type="Submit" class="btn btn-success">Multiplication</button>
+               <button type="Submit" class="btn btn-success p-2 m-1">Multiplication</button>
                </form>
                <br></br>
             </div>
 
             <div>
                <form onSubmit={this.execute3}>
-               <button type="Submit" class="btn btn-danger">Division</button>
+               <button type="Submit" class="btn btn-danger p-2 m-1">Division</button>
                </form>
                <br></br>
             </div> 
             </div>  
-            
+           <div class="d-flex justify-content-center p-3 m-5"> 
            {this.state.total}
+           </div>
           </div>
       );
     }
